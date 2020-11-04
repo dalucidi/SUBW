@@ -1,0 +1,17 @@
+/*//
+// Filename:	style.css
+// Purpose:	Handle webpage CSS visual design
+//*/
+
+h1
+{
+//    font-family: palatino; //Text font sitewide
+    text-align: center;  //Text alignment sitewide
+    
+}
+
+//Text box color for user input including login and signup info
+input[type=text], input[type=password]
+{
+    background-color: lightgrey ;
+}

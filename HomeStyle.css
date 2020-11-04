@@ -1,0 +1,315 @@
+
+.bg-base{
+    background-color: #C96C4A;
+}
+.w-10{
+    width:10%;
+}
+
+.w-15{
+    width:15%;
+}
+
+.w-20{
+    width:20%;
+}
+
+/*start of random background options*/
+.CP{
+      background-image: url("images/Complimentary.png");
+}
+.LB{
+      background-image: url("images/ComplimentaryLightBrown.png");
+}
+.LP{
+      background-image: url("images/ComplimentaryLightPurple.png");
+}
+.DB{
+      background-image: url("images/ComplimentaryDarkBrown.png");
+} 
+.DP{
+      background-image: url("images/ComplimentaryDarkPurple.png");
+}
+/*End of random background options*/
+
+/*css for the background of each page*/
+#back{
+    background-repeat: repeat;/*sets the background image used to repeat itself over and over filling the page*/
+    background-attachment: fixed;/*keeps the background "fixed" in place as the user scrolls on the page*/
+    background-size: auto;/*uses the size of the picture file when determining the size to display it to screen*/
+}
+/*css for anything we want in the middle of the page*/
+#mid{
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/*css for the open book picture to act as a background to display info over*/
+.bg-img {
+  /* The image used */
+  background-image: url("images/Book.png");
+
+
+
+  /* Control the height of the image */
+  min-height: 732px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: relative;
+}
+
+/* Full-width css for the input fields of type text*/
+  input[type=text]{
+  padding: 9px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #F3EEE8;
+}
+/*css for the input fields of type password*/
+input[type=password] {
+  padding: 9px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #F3EEE8;
+}
+
+/*changes the color of input fields when they are in focus*/
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/*add this to any elements to make the font bigger, bigger font => bgrfnt*/
+#bgrfnt{
+font-size:115%;
+}
+
+/*css for anything we want to put on the right side page of the book image*/
+.sideInfo{
+font-size:130%;
+position:absolute;
+right:34%;
+width:325px;
+top:10%
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-size:24px;
+}
+
+/*css for when a button is being hovered over*/
+.btn:hover {
+  opacity: 1;
+}
+
+/*css for the subw mascot leonard the book worm*/
+.Leanord{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10% ;
+}
+
+/* sets the background color of the header where leonard is layed over*/
+.header{
+    background-color: gray; #800080;
+}
+
+/*css for the search bar on every page*/
+#searchBar {
+    padding: 16px ;
+    float: none;
+    text-align: left ;
+    width: 200% ;
+    margin: 0;
+    margin-top: 20px ;
+    margin-left: 16px ;
+    border: 1px solid grey ;
+    font-size: 15px ;
+}
+
+/* css for all "a" elements like links to other subw pages*/
+a {
+    color: black;/*sets their color to black*/
+    text-decoration: none;
+}
+
+/*css for all unordered lists*/
+ul{
+        list-style-type: none;
+        background-color: green;/*sets their color to green*/
+        margin: 0;
+        padding: 0;
+       /* height: 55px; */
+        overflow: hidden;/*if any of the alement is overflowing out of their bounds or into another element then sont show it*/
+        position: static;
+        top: 0;
+        width: 100%
+}
+
+/*css for lists*/
+li{
+        display: inline;
+        float: left;
+        text-align: center;
+        border-right: 1px solid white;
+        font-family: 'Saira', sans-serif;
+        font-size: 20px ;
+}
+
+/*more css for all "a" elements like links to other subw pages*/
+a {
+    display: block;
+    padding: 30px;
+}
+
+.noDisp{
+    display: inline;
+}
+
+/*change the background color of lists when they are hovered over*/
+li a:hover{
+    background-color: grey ;
+}
+/*removes the border of the last element of a list*/
+li:last-child{
+    border-right: none ;
+}
+
+/*removes the border of the 5th child of a list element*/
+ul li:nth-child(5) {
+  border-right: none ;
+}
+/*sets the font size of any header test elements to a nice 50 pixels*/
+h1{
+    font-size: 50px ;
+    font-family: 'Saira', sans-serif;
+    font-weight: 600;
+}
+
+
+/*when the window panel is 600px or less do the encapsulated css*/
+@media only screen and (max-width: 927px) {
+  li/*makes the list elemnts fit the sceen better when window 600px or less*/
+  {
+    float: none;
+    width: 100% ;
+    display: block;
+    margin: auto;
+    padding: 8px;
+    overflow: hidden;
+  }
+ 
+}
+/*when the window panel is 1200px or less do the encapsulated css*/
+@media only screen and (max-width: 1200px) {
+/*makes the elements fit the sceen better when window 1200px or less*/
+  #searchBar {
+    padding: 16px ;
+    float: none;
+    text-align: left ;
+    width: 150% ;
+    margin: 0;
+    margin-top: 20px ;
+    margin-left: 16px ;
+    border: 1px solid grey ;
+    font-size: 15px ;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+ul li:first-child {
+  order: 2;
+}
+ul li:nth-child(2) {
+  order: 5;
+}
+ul li:nth-child(3) {
+  order: 6;
+}
+ul li:nth-child(4) {
+  order: 1;
+}
+ul li:nth-child(5) {
+  order: 3;
+}
+ul li:nth-child(6) {
+  order: 4;
+}
+ 
+}
+/*when the window panel is 1075px or less do the encapsulated css*/
+@media only screen and (max-width: 1075px) {
+  #searchBar {
+    padding: 16px ;
+    float: none;
+    text-align: left ;
+    width: 110% ;
+    margin: 0;
+    margin-top: 20px ;
+    margin-left: 16px ;
+    border: 1px solid grey ;
+    font-size: 15px ;
+}
+ 
+}
+/*when the window panel is 975px or less do the encapsulated css*/
+@media only screen and (max-width: 975px) {
+  #searchBar {
+    padding: 16px ;
+    float: none;
+    text-align: left ;
+    width: 85% ;
+    margin: 0;
+    margin-top: 20px ;
+    margin-left: 16px ;
+    border: 1px solid grey ;
+    font-size: 15px ;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+ul li:first-child {
+  order: 2;
+}
+ul li:nth-child(2) {
+  order: 5;
+}
+ul li:nth-child(3) {
+  order: 6;
+}
+ul li:nth-child(4) {
+  order: 1;
+}
+ul li:nth-child(5) {
+  order: 3;
+}
+ul li:nth-child(6) {
+  order: 4;
+}
+ 
+}
+
+.navbar-custom {
+    background-color: green;
+}
+
+.remove-all-margin{
+margin:0 ! important;
+}
